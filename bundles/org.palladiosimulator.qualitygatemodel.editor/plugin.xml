@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated qualitygatemodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.qualitygatemodel.presentation.QualitygatemodelModelWizardID"
+            name="%_UI_QualitygatemodelModelWizard_label"
+            class="org.palladiosimulator.qualitygatemodel.presentation.QualitygatemodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QualitygatemodelModelFile.gif">
+         <description>%_UI_QualitygatemodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated qualitygatemodel -->
+      <editor
+            id="org.palladiosimulator.qualitygatemodel.presentation.QualitygatemodelEditorID"
+            name="%_UI_QualitygatemodelEditor_label"
+            icon="icons/full/obj16/QualitygatemodelModelFile.gif"
+            extensions="qualitygatemodel"
+            class="org.palladiosimulator.qualitygatemodel.presentation.QualitygatemodelEditor"
+            contributorClass="org.palladiosimulator.qualitygatemodel.presentation.QualitygatemodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

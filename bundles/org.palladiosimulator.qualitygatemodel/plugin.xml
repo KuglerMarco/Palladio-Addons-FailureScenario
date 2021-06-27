@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated qualitygatemodel -->
+      <package
+            uri="http://palladiosimulator.org/qualitygatemodel/1.0"
+            class="org.palladiosimulator.qualitygatemodel.QualitygatemodelPackage"
+            genModel="model/qualitygatemodel.genmodel"/>
+   </extension>
+
+</plugin>

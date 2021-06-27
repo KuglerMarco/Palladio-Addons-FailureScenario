@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated qualitygatemodel -->
+      <factory
+            uri="http://palladiosimulator.org/qualitygatemodel/1.0"
+            class="org.palladiosimulator.qualitygatemodel.provider.QualitygatemodelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated qualitygatemodel -->
+      <extender
+            uri="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2"
+            class="org.palladiosimulator.qualitygatemodel.provider.QualitygatemodelItemProviderAdapterFactory$CompositionChildCreationExtender"/>
+      <extender
+            uri="http://palladiosimulator.org/PalladioComponentModel/System/5.2"
+            class="org.palladiosimulator.qualitygatemodel.provider.QualitygatemodelItemProviderAdapterFactory$SystemChildCreationExtender"/>
+   </extension>
+
+</plugin>
