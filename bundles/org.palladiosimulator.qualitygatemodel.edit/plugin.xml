@@ -19,14 +19,4 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated qualitygatemodel -->
-      <extender
-            uri="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2"
-            class="org.palladiosimulator.qualitygatemodel.provider.QualitygatemodelItemProviderAdapterFactory$CompositionChildCreationExtender"/>
-      <extender
-            uri="http://palladiosimulator.org/PalladioComponentModel/System/5.2"
-            class="org.palladiosimulator.qualitygatemodel.provider.QualitygatemodelItemProviderAdapterFactory$SystemChildCreationExtender"/>
-   </extension>
-
 </plugin>

@@ -14,15 +14,29 @@
   <editPluginVariables>CDO_EDIT=org.eclipse.emf.cdo.edit</editPluginVariables>
   <genPackages prefix="Qualitygatemodel" basePackage="org.palladiosimulator" disposableProviderFactory="true"
       childCreationExtenders="true" ecorePackage="qualitygatemodel.ecore#/">
-    <genClasses ecoreClass="qualitygatemodel.ecore#//QualityGate"/>
-    <genClasses ecoreClass="qualitygatemodel.ecore#//MetricQualityGate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//MetricQualityGate/servicelevelobjective"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//QualityGate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//QualityGate/predicate"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//QualityGate/scope"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//QualityGate/impact"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//QualityGate/criticality"/>
     </genClasses>
-    <genClasses ecoreClass="qualitygatemodel.ecore#//ParametricQualityGate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//ParametricQualityGate/pcmrandomvariable"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//Scope"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//Impact"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//Criticality"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//SignatureScope">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//SignatureScope/signature"/>
     </genClasses>
-    <genClasses ecoreClass="qualitygatemodel.ecore#//QualityGateAssemblyConnector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//QualityGateAssemblyConnector/qualitygate"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//MetricScope">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//MetricScope/metric"/>
+    </genClasses>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//RequestParameterScope"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//ResultParameterScope"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//RequestMetricScope"/>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//RessourceScope">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//RessourceScope/resourcetype"/>
+    </genClasses>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//EventBasedCommunicationScope">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//EventBasedCommunicationScope/providedrole"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
