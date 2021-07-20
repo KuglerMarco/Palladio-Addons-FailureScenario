@@ -19,10 +19,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
         eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MetricScope" abstract="true" eSuperTypes="#//Scope">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="metric" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetricScope" abstract="true" eSuperTypes="#//Scope"/>
   <eClassifiers xsi:type="ecore:EClass" name="RequestParameterScope" eSuperTypes="#//SignatureScope"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResultParameterScope" eSuperTypes="#//SignatureScope"/>
   <eClassifiers xsi:type="ecore:EClass" name="RequestMetricScope" eSuperTypes="#//MetricScope #//SignatureScope"/>

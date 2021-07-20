@@ -17,4 +17,10 @@ Workflow {
 		directory = "platform:/resource/org.palladiosimulator.failuremodel.editor/src-gen"
 		exclude = ".gitkeep"
 	}
+	component = URISupportingDirectoryCleaner {
+		directory = "platform:/resource/org.palladiosimulator.qualitygatemodel/src-gen"
+		directory = "platform:/resource/org.palladiosimulator.qualitygatemodel.edit/src-gen"
+		directory = "platform:/resource/org.palladiosimulator.qualitygatemodel.editor/src-gen"
+		exclude = ".gitkeep"
+	}
 }

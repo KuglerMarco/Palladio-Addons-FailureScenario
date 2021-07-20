@@ -26,9 +26,7 @@
     <genClasses ecoreClass="qualitygatemodel.ecore#//SignatureScope">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//SignatureScope/signature"/>
     </genClasses>
-    <genClasses ecoreClass="qualitygatemodel.ecore#//MetricScope">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qualitygatemodel.ecore#//MetricScope/metric"/>
-    </genClasses>
+    <genClasses ecoreClass="qualitygatemodel.ecore#//MetricScope"/>
     <genClasses ecoreClass="qualitygatemodel.ecore#//RequestParameterScope"/>
     <genClasses ecoreClass="qualitygatemodel.ecore#//ResultParameterScope"/>
     <genClasses ecoreClass="qualitygatemodel.ecore#//RequestMetricScope"/>
