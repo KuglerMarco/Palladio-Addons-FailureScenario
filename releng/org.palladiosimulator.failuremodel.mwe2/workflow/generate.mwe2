@@ -91,15 +91,6 @@ Workflow {
 		srcPath = "platform:/resource/org.palladiosimulator.failuremodel/src-gen"
 		srcPath = "platform:/resource/org.palladiosimulator.failuremodel/src"
 	}
-	
-	component = EcoreGenerator {
-		generateCustomClasses = false
-		generateEdit = true
-		generateEditor = true
-		genModel = "platform:/resource/org.palladiosimulator.qualitygatemodel/model/qualitygatemodel.genmodel"
-		srcPath = "platform:/resource/org.palladiosimulator.qualitygatemodel/src-gen"
-		srcPath = "platform:/resource/org.palladiosimulator.qualitygatemodel/src"
-	}
 
 	component = GapPatternPostProcessor {
 		folders = {
@@ -110,12 +101,4 @@ Workflow {
 		}
 	}	
 	
-	component = GapPatternPostProcessor {
-		folders = {
-			gen = "platform:/resource/org.palladiosimulator.qualitygatemodel/src-gen"
-			src = "platform:/resource/org.palladiosimulator.qualitygatemodel/src"
-			gen = "platform:/resource/org.palladiosimulator.qualitygatemodel.edit/src-gen"
-			src = "platform:/resource/org.palladiosimulator.qualitygatemodel.edit/src"
-		}
-	}	
 }

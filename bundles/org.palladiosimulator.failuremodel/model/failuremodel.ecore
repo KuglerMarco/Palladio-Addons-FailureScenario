@@ -174,4 +174,36 @@
       </eGenericSuperTypes>
     </eClassifiers>
   </eSubpackages>
+  <eSubpackages name="qualitygate" nsURI="http://palladiosimulator.org/qualitygate/1.0"
+      nsPrefix="qualitygate">
+    <eClassifiers xsi:type="ecore:EClass" name="QualityGate">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scope" lowerBound="1"
+          eType="#//qualitygate/Scope" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="criticality" eType="#//qualitygate/Criticality"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Impact"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Criticality"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SignatureScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MetricScope" abstract="true" eSuperTypes="#//qualitygate/Scope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RequestParameterScope" eSuperTypes="#//qualitygate/SignatureScope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ResultParameterScope" eSuperTypes="#//qualitygate/SignatureScope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RequestMetricScope" eSuperTypes="#//qualitygate/MetricScope #//qualitygate/SignatureScope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RessourceScope" eSuperTypes="#//qualitygate/MetricScope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourcetype" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourcetype/ResourceType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EventBasedCommunicationScope" eSuperTypes="#//qualitygate/RequestMetricScope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+    </eClassifiers>
+  </eSubpackages>
 </ecore:EPackage>

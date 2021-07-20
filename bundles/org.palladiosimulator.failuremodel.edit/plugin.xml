@@ -7,19 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated dummy -->
-      <factory
-            uri="http://mdsd.tools/eclipseproject/0.1.0"
-            class="org.palladiosimulator.failuremodel.dummy.provider.DummyItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated failuremodel -->
       <factory
             uri="http://palladiosimulator.org/failurescenario/1.0"
@@ -37,6 +24,19 @@
       <factory
             uri="http://palladiosimulator.org/failuretype/1.0"
             class="org.palladiosimulator.failuremodel.failuretype.provider.FailuretypeItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated failuremodel -->
+      <factory
+            uri="http://palladiosimulator.org/qualitygate/1.0"
+            class="org.palladiosimulator.failuremodel.qualitygate.provider.QualitygateItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

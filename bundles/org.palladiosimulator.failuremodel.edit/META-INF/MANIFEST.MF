@@ -3,17 +3,28 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.failuremodel.edit;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.failuremodel.edit
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.failuremodel.failurescenario.provider.FailuremodelEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.palladiosimulator.failuremodel.failurescenario.provider,
+ org.palladiosimulator.failuremodel.failuretype.provider,
+ org.palladiosimulator.failuremodel.qualitygate.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.failuremodel;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- org.eclipse.emf.ecore.edit;bundle-version="2.13.0",
- org.palladiosimulator.pcm.edit;bundle-version="4.3.0"
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.edit;visibility:=reexport,
+ de.uka.ipd.sdq.identifier;visibility:=reexport,
+ de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
+ org.palladiosimulator.pcm;visibility:=reexport,
+ org.palladiosimulator.pcm.edit;visibility:=reexport,
+ de.uka.ipd.sdq.probfunction;visibility:=reexport,
+ de.uka.ipd.sdq.probfunction.edit;visibility:=reexport,
+ de.uka.ipd.sdq.stoex;visibility:=reexport,
+ de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
+ de.uka.ipd.sdq.units;visibility:=reexport,
+ de.uka.ipd.sdq.units.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Export-Package: org.palladiosimulator.failuremodel.failurescenario.provider,
- org.palladiosimulator.failuremodel.failuretype.provider

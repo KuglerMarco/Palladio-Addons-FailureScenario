@@ -16,8 +16,5 @@
     <module>org.palladiosimulator.failuremodel</module>
     <module>org.palladiosimulator.failuremodel.edit</module>
     <module>org.palladiosimulator.failuremodel.editor</module>
-    <module>org.palladiosimulator.qualitygatemodel</module>
-    <module>org.palladiosimulator.qualitygatemodel.edit</module>
-    <module>org.palladiosimulator.qualitygatemodel.editor</module>
   </modules>
 </project>

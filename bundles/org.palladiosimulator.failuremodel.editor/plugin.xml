@@ -7,34 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated dummy -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.palladiosimulator.failuremodel.dummy.presentation.DummyModelWizardID"
-            name="%_UI_DummyModelWizard_label"
-            class="org.palladiosimulator.failuremodel.dummy.presentation.DummyModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/DummyModelFile.gif">
-         <description>%_UI_DummyModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated dummy -->
-      <editor
-            id="org.palladiosimulator.failuremodel.dummy.presentation.DummyEditorID"
-            name="%_UI_DummyEditor_label"
-            icon="icons/full/obj16/DummyModelFile.gif"
-            extensions="dummy"
-            class="org.palladiosimulator.failuremodel.dummy.presentation.DummyEditor"
-            contributorClass="org.palladiosimulator.failuremodel.dummy.presentation.DummyActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
       <!-- @generated failuremodel -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
@@ -87,6 +59,34 @@
             extensions="failuretype"
             class="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeEditor"
             contributorClass="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated failuremodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.qualitygate.presentation.QualitygateModelWizardID"
+            name="%_UI_QualitygateModelWizard_label"
+            class="org.palladiosimulator.failuremodel.qualitygate.presentation.QualitygateModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QualitygateModelFile.gif">
+         <description>%_UI_QualitygateModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated failuremodel -->
+      <editor
+            id="org.palladiosimulator.failuremodel.qualitygate.presentation.QualitygateEditorID"
+            name="%_UI_QualitygateEditor_label"
+            icon="icons/full/obj16/QualitygateModelFile.gif"
+            extensions="qualitygate"
+            class="org.palladiosimulator.failuremodel.qualitygate.presentation.QualitygateEditor"
+            contributorClass="org.palladiosimulator.failuremodel.qualitygate.presentation.QualitygateActionBarContributor">
       </editor>
    </extension>
 
