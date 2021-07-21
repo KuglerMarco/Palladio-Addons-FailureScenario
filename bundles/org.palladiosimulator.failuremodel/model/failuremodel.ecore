@@ -178,7 +178,8 @@
       nsPrefix="qualitygate">
     <eClassifiers xsi:type="ecore:EClass" name="QualityGate">
       <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"/>
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scope" lowerBound="1"
           eType="#//qualitygate/Scope" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
