@@ -95,11 +95,10 @@
     </nestedGenPackages>
     <nestedGenPackages prefix="Qualitygate" disposableProviderFactory="true" ecorePackage="failuremodel.ecore#//qualitygate">
       <genClasses ecoreClass="failuremodel.ecore#//qualitygate/QualityGate">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/predicate"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/scope"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/impact"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/criticality"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/premise"/>
       </genClasses>
       <genClasses image="false" ecoreClass="failuremodel.ecore#//qualitygate/Scope"/>
       <genClasses ecoreClass="failuremodel.ecore#//qualitygate/Impact"/>
