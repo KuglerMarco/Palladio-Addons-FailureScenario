@@ -176,7 +176,7 @@
   </eSubpackages>
   <eSubpackages name="qualitygate" nsURI="http://palladiosimulator.org/qualitygate/1.0"
       nsPrefix="qualitygate">
-    <eClassifiers xsi:type="ecore:EClass" name="QualityGate">
+    <eClassifiers xsi:type="ecore:EClass" name="QualityGate" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="scope" lowerBound="1"
           eType="#//qualitygate/Scope" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
@@ -187,9 +187,9 @@
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Impact"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Criticality"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Criticality" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="SignatureScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
