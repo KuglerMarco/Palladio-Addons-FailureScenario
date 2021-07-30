@@ -32,6 +32,16 @@ Workflow {
 		}
 		
 		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore"
+			onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore"
+		}
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+			onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+		}
+		
+		uriMap = ContextDependentMapping {
 			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
 			onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
 		}
@@ -76,6 +86,7 @@ Workflow {
 		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
 		registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
