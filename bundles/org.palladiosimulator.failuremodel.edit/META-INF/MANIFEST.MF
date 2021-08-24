@@ -11,14 +11,19 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.palladiosimulator.failuremodel.failurescenario.provider,
  org.palladiosimulator.failuremodel.failuretype.provider,
- org.palladiosimulator.failuremodel.qualitygate.provider
+ org.palladiosimulator.failuremodel.qualitygate.provider,
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.failuremodel;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
+ org.palladiosimulator.edp2;visibility:=reexport,
+ org.palladiosimulator.edp2.edit;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
  de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
+ org.palladiosimulator.metricspec;visibility:=reexport,
+ org.palladiosimulator.metricspec.edit;visibility:=reexport,
  org.palladiosimulator.pcm;visibility:=reexport,
  org.palladiosimulator.pcm.edit;visibility:=reexport,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
@@ -26,6 +31,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.stoex;visibility:=reexport,
  de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
- de.uka.ipd.sdq.units.edit;visibility:=reexport,
- org.palladiosimulator.metricspec.edit;bundle-version="5.0.0";visibility:=reexport
+ de.uka.ipd.sdq.units.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

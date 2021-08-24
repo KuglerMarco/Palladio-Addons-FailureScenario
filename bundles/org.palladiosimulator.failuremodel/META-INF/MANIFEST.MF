@@ -16,7 +16,9 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.15.0",
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
  de.uka.ipd.sdq.stoex;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
- org.palladiosimulator.metricspec;bundle-version="5.0.0"
+ org.palladiosimulator.metricspec;bundle-version="5.0.0";visibility:=reexport,
+ org.palladiosimulator.edp2;bundle-version="5.0.0";visibility:=reexport,
+ org.palladiosimulator.commons
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.failuremodel.failurescenario,
  org.palladiosimulator.failuremodel.failurescenario.impl,
@@ -26,4 +28,7 @@ Export-Package: org.palladiosimulator.failuremodel.failurescenario,
  org.palladiosimulator.failuremodel.failuretype.util,
  org.palladiosimulator.failuremodel.qualitygate,
  org.palladiosimulator.failuremodel.qualitygate.impl,
- org.palladiosimulator.failuremodel.qualitygate.util
+ org.palladiosimulator.failuremodel.qualitygate.util,
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint,
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.impl,
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.util

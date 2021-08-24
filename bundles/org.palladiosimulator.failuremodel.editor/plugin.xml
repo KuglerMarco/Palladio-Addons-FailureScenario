@@ -90,4 +90,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated failuremodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.presentation.QualitygatemeasuringpointModelWizardID"
+            name="%_UI_QualitygatemeasuringpointModelWizard_label"
+            class="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.presentation.QualitygatemeasuringpointModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QualitygatemeasuringpointModelFile.gif">
+         <description>%_UI_QualitygatemeasuringpointModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated failuremodel -->
+      <editor
+            id="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.presentation.QualitygatemeasuringpointEditorID"
+            name="%_UI_QualitygatemeasuringpointEditor_label"
+            icon="icons/full/obj16/QualitygatemeasuringpointModelFile.gif"
+            extensions="qualitygatemeasuringpoint"
+            class="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.presentation.QualitygatemeasuringpointEditor"
+            contributorClass="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.presentation.QualitygatemeasuringpointActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

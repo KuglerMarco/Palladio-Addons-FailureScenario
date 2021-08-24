@@ -26,4 +26,12 @@
             genModel="model/failuremodel.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated failuremodel -->
+      <package
+            uri="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
+            class="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.QualitygatemeasuringpointPackage"
+            genModel="model/failuremodel.genmodel"/>
+   </extension>
+
 </plugin>

@@ -45,4 +45,24 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated failuremodel -->
+      <factory
+            uri="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
+            class="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.provider.QualitygatemeasuringpointItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated failuremodel -->
+      <extender
+            uri="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
+            class="org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.provider.QualitygatemeasuringpointItemProviderAdapterFactory$MeasuringpointChildCreationExtender"/>
+   </extension>
+
 </plugin>

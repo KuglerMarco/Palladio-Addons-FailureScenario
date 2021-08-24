@@ -41,6 +41,20 @@ Workflow {
 			onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
 		}
 		
+		
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/edp2.ecore"
+			onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/edp2.ecore"
+		}
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/edp2.genmodel"
+			onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/edp2.genmodel"
+		}
+		
+		
+		
 		uriMap = ContextDependentMapping {
 			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
 			onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"

@@ -186,6 +186,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="premise" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
@@ -208,6 +209,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="EventBasedCommunicationScope" eSuperTypes="#//qualitygate/RequestMetricScope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="qualitygatemeasuringpoint" nsURI="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
+      nsPrefix="qualitygatemeasuringpoint">
+    <eClassifiers xsi:type="ecore:EClass" name="QualitygateMeasuringPoint" eSuperTypes="../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint #//qualitygatemeasuringpoint/QualitygateReference"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QualitygateReference">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="qualitygate" lowerBound="1"
+          eType="#//qualitygate/QualityGate"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
