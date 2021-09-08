@@ -7,11 +7,11 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="FailureScenarioRepository" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureScenarioRepository" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="failurescenarios" upperBound="-1"
           eType="#//failurescenario/FailureScenario" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FailureScenario" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureScenario" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="occurrences" upperBound="-1"
           eType="#//failurescenario/Occurrence" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionEnabled" lowerBound="1"
@@ -30,21 +30,21 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
           eType="#//failurescenario/Reference" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="pointInTime" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reference" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkingResourceReference" eSuperTypes="#//failurescenario/Reference">
       <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InternalActionReference" eSuperTypes="#//failurescenario/Reference">
       <eStructuralFeatures xsi:type="ecore:EReference" name="internalAction" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/InternalAction"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//seff/InternalAction"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ProcessingResourceReference" eSuperTypes="#//failurescenario/Reference">
       <eStructuralFeatures xsi:type="ecore:EReference" name="processingResource" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ProcessingResourceSpecification"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ProcessingResourceSpecification"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="failuretype" nsURI="http://palladiosimulator.org/failuretype/1.0"
@@ -52,14 +52,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="FailureTypeRepository" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureTypeRepository" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In this repository all failures can be created to use them later in a scenario."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failuretypes" upperBound="-1"
           eType="#//failuretype/Failure" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Failure" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="Failure" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eOperations name="getSupportedElementType" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SWFailure" abstract="true" eSuperTypes="#//failuretype/Failure">
@@ -74,15 +74,15 @@
     <eClassifiers xsi:type="ecore:EClass" name="Domain" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="Content" abstract="true" eSuperTypes="#//failuretype/Domain">
       <eStructuralFeatures xsi:type="ecore:EReference" name="degreeOfCorruption" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Timing" abstract="true" eSuperTypes="#//failuretype/Domain">
       <eStructuralFeatures xsi:type="ecore:EReference" name="delay" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scalingFactor" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Crash" abstract="true" eSuperTypes="#//failuretype/Domain"/>
@@ -101,7 +101,7 @@
         <eBounds eClassifier="#//failuretype/Failure"/>
       </eTypeParameters>
       <eStructuralFeatures xsi:type="ecore:EReference" name="duration" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1">
         <eGenericType eTypeParameter="#//failuretype/Transient/Failuretype"/>
@@ -122,7 +122,7 @@
         <eBounds eClassifier="#//failuretype/Failure"/>
       </eTypeParameters>
       <eStructuralFeatures xsi:type="ecore:EReference" name="probabilityOfOccurrence"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          lowerBound="1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1">
         <eGenericType eTypeParameter="#//failuretype/Byzantine/Failuretype"/>
@@ -176,24 +176,25 @@
   </eSubpackages>
   <eSubpackages name="qualitygate" nsURI="http://palladiosimulator.org/qualitygate/1.0"
       nsPrefix="qualitygate">
-    <eClassifiers xsi:type="ecore:EClass" name="QualityGate" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="QualityGate" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="scope" lowerBound="1"
           eType="#//qualitygate/Scope" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="criticality" eType="#//qualitygate/Criticality"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="criticality" eType="#//qualitygate/Severity"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="premise" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="severity" eType="#//severityhierarchy/Severity"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Criticality" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Severity" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="SignatureScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetricScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="metric" lowerBound="1"
@@ -204,12 +205,17 @@
     <eClassifiers xsi:type="ecore:EClass" name="RequestMetricScope" eSuperTypes="#//qualitygate/MetricScope #//qualitygate/SignatureScope"/>
     <eClassifiers xsi:type="ecore:EClass" name="RessourceScope" eSuperTypes="#//qualitygate/MetricScope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="resourcetype" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourcetype/ResourceType"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourcetype/ResourceType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EventBasedCommunicationScope" eSuperTypes="#//qualitygate/RequestMetricScope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Catastrophic" eSuperTypes="#//qualitygate/Severity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Hazardous" eSuperTypes="#//qualitygate/Severity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Major" eSuperTypes="#//qualitygate/Severity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Minor" eSuperTypes="#//qualitygate/Severity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NoSafetyEffect" eSuperTypes="#//qualitygate/Severity"/>
   </eSubpackages>
   <eSubpackages name="qualitygatemeasuringpoint" nsURI="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
       nsPrefix="qualitygatemeasuringpoint">
@@ -218,5 +224,16 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="qualitygate" lowerBound="1"
           eType="#//qualitygate/QualityGate"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SeverityMeasuringPoint" eSuperTypes="../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="severityhierarchy" nsURI="http://palladiosimulator.org/severityhierarchy/1.0"
+      nsPrefix="severityhierarchy">
+    <eClassifiers xsi:type="ecore:EClass" name="SeverityRepository" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="severity" upperBound="-1"
+          eType="#//severityhierarchy/Severity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Severity" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
   </eSubpackages>
 </ecore:EPackage>

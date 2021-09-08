@@ -118,4 +118,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated failuremodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.severityhierarchy.presentation.SeverityhierarchyModelWizardID"
+            name="%_UI_SeverityhierarchyModelWizard_label"
+            class="org.palladiosimulator.failuremodel.severityhierarchy.presentation.SeverityhierarchyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SeverityhierarchyModelFile.gif">
+         <description>%_UI_SeverityhierarchyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated failuremodel -->
+      <editor
+            id="org.palladiosimulator.failuremodel.severityhierarchy.presentation.SeverityhierarchyEditorID"
+            name="%_UI_SeverityhierarchyEditor_label"
+            icon="icons/full/obj16/SeverityhierarchyModelFile.gif"
+            extensions="severityhierarchy"
+            class="org.palladiosimulator.failuremodel.severityhierarchy.presentation.SeverityhierarchyEditor"
+            contributorClass="org.palladiosimulator.failuremodel.severityhierarchy.presentation.SeverityhierarchyActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

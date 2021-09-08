@@ -31,4 +31,7 @@ Export-Package: org.palladiosimulator.failuremodel.failurescenario,
  org.palladiosimulator.failuremodel.qualitygate.util,
  org.palladiosimulator.failuremodel.qualitygatemeasuringpoint,
  org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.impl,
- org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.util
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.util,
+ org.palladiosimulator.failuremodel.severityhierarchy,
+ org.palladiosimulator.failuremodel.severityhierarchy.impl,
+ org.palladiosimulator.failuremodel.severityhierarchy.util

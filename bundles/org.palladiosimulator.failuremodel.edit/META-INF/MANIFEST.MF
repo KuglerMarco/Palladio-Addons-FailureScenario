@@ -12,7 +12,8 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.palladiosimulator.failuremodel.failurescenario.provider,
  org.palladiosimulator.failuremodel.failuretype.provider,
  org.palladiosimulator.failuremodel.qualitygate.provider,
- org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.provider
+ org.palladiosimulator.failuremodel.qualitygatemeasuringpoint.provider,
+ org.palladiosimulator.failuremodel.severityhierarchy.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.failuremodel;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
