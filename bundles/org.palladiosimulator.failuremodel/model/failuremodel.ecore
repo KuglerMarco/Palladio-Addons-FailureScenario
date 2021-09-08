@@ -181,8 +181,6 @@
           eType="#//qualitygate/Scope" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="criticality" eType="#//qualitygate/Severity"
-          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="premise" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
@@ -191,7 +189,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Severity" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="SignatureScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
@@ -211,11 +208,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Catastrophic" eSuperTypes="#//qualitygate/Severity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Hazardous" eSuperTypes="#//qualitygate/Severity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Major" eSuperTypes="#//qualitygate/Severity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Minor" eSuperTypes="#//qualitygate/Severity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NoSafetyEffect" eSuperTypes="#//qualitygate/Severity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EarlyTimingScope" eSuperTypes="#//qualitygate/RequestMetricScope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LateTimingScope" eSuperTypes="#//qualitygate/RequestMetricScope"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CrashScope" eSuperTypes="#//qualitygate/SignatureScope"/>
   </eSubpackages>
   <eSubpackages name="qualitygatemeasuringpoint" nsURI="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
       nsPrefix="qualitygatemeasuringpoint">
