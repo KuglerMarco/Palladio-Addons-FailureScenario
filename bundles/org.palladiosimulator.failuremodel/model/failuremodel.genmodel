@@ -97,15 +97,15 @@
         disposableProviderFactory="true" ecorePackage="failuremodel.ecore#//qualitygate">
       <genClasses ecoreClass="failuremodel.ecore#//qualitygate/QualityGate">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/scope"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/impact"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/premise"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/predicate"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/assemblyContext"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/severity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/QualityGate/impact"/>
       </genClasses>
       <genClasses image="false" ecoreClass="failuremodel.ecore#//qualitygate/Scope"/>
-      <genClasses ecoreClass="failuremodel.ecore#//qualitygate/Impact"/>
       <genClasses image="false" ecoreClass="failuremodel.ecore#//qualitygate/SignatureScope">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/SignatureScope/signature"/>
@@ -123,11 +123,8 @@
       </genClasses>
       <genClasses ecoreClass="failuremodel.ecore#//qualitygate/EventBasedCommunicationScope">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/EventBasedCommunicationScope/providedrole"/>
+            ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygate/EventBasedCommunicationScope/qualitygate"/>
       </genClasses>
-      <genClasses ecoreClass="failuremodel.ecore#//qualitygate/EarlyTimingScope"/>
-      <genClasses ecoreClass="failuremodel.ecore#//qualitygate/LateTimingScope"/>
-      <genClasses ecoreClass="failuremodel.ecore#//qualitygate/CrashScope"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Qualitygatemeasuringpoint" basePackage="org.palladiosimulator.failuremodel"
         disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="failuremodel.ecore#//qualitygatemeasuringpoint">
@@ -139,6 +136,10 @@
       <genClasses ecoreClass="failuremodel.ecore#//qualitygatemeasuringpoint/SeverityMeasuringPoint">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygatemeasuringpoint/SeverityMeasuringPoint/system"/>
+      </genClasses>
+      <genClasses ecoreClass="failuremodel.ecore#//qualitygatemeasuringpoint/ComponentInterfaceMeasuringPoint">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//qualitygatemeasuringpoint/ComponentInterfaceMeasuringPoint/role"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Severityhierarchy" basePackage="org.palladiosimulator.failuremodel"

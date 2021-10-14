@@ -179,16 +179,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="QualityGate" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="scope" lowerBound="1"
           eType="#//qualitygate/Scope" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="impact" eType="#//qualitygate/Impact"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="premise" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="severity" eType="#//severityhierarchy/Severity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="impact" upperBound="-1"
+          eType="#//failuretype/Failure"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scope" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="SignatureScope" abstract="true" eSuperTypes="#//qualitygate/Scope">
       <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
@@ -204,13 +202,10 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="resourcetype" lowerBound="1"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourcetype/ResourceType"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="EventBasedCommunicationScope" eSuperTypes="#//qualitygate/RequestMetricScope">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EventBasedCommunicationScope" eSuperTypes="#//qualitygate/SignatureScope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="qualitygate" lowerBound="1"
+          eType="#//qualitygate/QualityGate"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="EarlyTimingScope" eSuperTypes="#//qualitygate/RequestMetricScope"/>
-    <eClassifiers xsi:type="ecore:EClass" name="LateTimingScope" eSuperTypes="#//qualitygate/RequestMetricScope"/>
-    <eClassifiers xsi:type="ecore:EClass" name="CrashScope" eSuperTypes="#//qualitygate/SignatureScope"/>
   </eSubpackages>
   <eSubpackages name="qualitygatemeasuringpoint" nsURI="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0"
       nsPrefix="qualitygatemeasuringpoint">
@@ -220,7 +215,13 @@
           eType="#//qualitygate/QualityGate"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SeverityMeasuringPoint" eSuperTypes="../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="system" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ComponentInterfaceMeasuringPoint"
+        eSuperTypes="../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Role"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="severityhierarchy" nsURI="http://palladiosimulator.org/severityhierarchy/1.0"
